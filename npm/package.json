@@ -1,0 +1,35 @@
+{
+  "name": "@apiverve/filesizeformatter",
+  "version": "1.1.12",
+  "description": "File Size Formatter is a tool for converting bytes to human-readable file sizes (KB, MB, GB, TB, etc.). It supports both binary (1024) and decimal (1000) standards with customizable precision.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "mocha",
+    "example": "node examples/basic.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/filesizeformatter-api.git",
+    "directory": "npm"
+  },
+  "keywords": [
+    "file size", "bytes converter", "kb mb gb", "file size formatter", "storage size"
+  ],
+  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/filesizeformatter-api/issues"
+  },
+  "homepage": "https://apiverve.com/marketplace/filesizeformatter?utm_source=npm",
+  "devDependencies": {
+    "mocha": "^11.0.1",
+    "chai": "^5.1.2",
+    "dotenv": "^16.4.7"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "promise": "^8.3.0",
+    "axios": "1.13.2"
+  }
+}
