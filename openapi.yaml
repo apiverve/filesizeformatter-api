@@ -1,0 +1,103 @@
+openapi: 3.0.4
+info:
+  title: File Size Formatter
+  description: File Size Formatter is a tool for converting bytes to human-readable file sizes (KB, MB, GB, TB, etc.). It supports both binary (1024) and decimal (1000) standards with customizable precision.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/filesizeformatter:
+    get:
+      summary: Format File Size
+      description: File Size Formatter is a tool for converting bytes to human-readable file sizes (KB, MB, GB, TB, etc.). It supports both binary (1024) and decimal (1000) standards with customizable precision.
+      operationId: filesizeformatter
+      parameters:
+      - name: bytes
+        in: query
+        schema:
+          type: string
+        required: true
+        description: Number of bytes to format
+        example: '1073741824'
+      - name: unit
+        in: query
+        schema:
+          type: string
+        required: false
+        description: Specific target unit (optional, auto-selects best unit if not specified)
+        example: GB
+      - name: precision
+        default: '2'
+        in: query
+        schema:
+          type: string
+        required: false
+        description: 'Decimal places (0-10, default: 2)'
+        example: '2'
+      - name: standard
+        default: binary
+        in: query
+        schema:
+          type: string
+        required: false
+        description: "Standard to use: 'binary' (1024) or 'decimal' (1000) (default: binary)"
+        example: binary
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  bytes: 1073741824
+                  formatted: 1 GiB
+                  value: 1
+                  unit: GiB
+                  standard: binary
+                  precision: 2
+                  conversions:
+                    B: 1073741824
+                    KiB: 1048576
+                    MiB: 1024
+                    GiB: 1
+                    TiB: 0
+                    PiB: 0
+                    EiB: 0
+                    ZiB: 0
+                    YiB: 0
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
