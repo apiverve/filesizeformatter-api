@@ -15,9 +15,9 @@ const api = new filesizeformatterAPI({
 
 // Example query
 var query = {
-  bytes: "1073741824",
+  bytes: 1073741824,
   unit: "GB",
-  precision: "2",
+  precision: 2,
   standard: "binary"
 };
 
