@@ -13,15 +13,7 @@ const API_URL = 'https://api.apiverve.com/v1/filesizeformatter';
  */
 async function callFileSizeFormatterAPI() {
   try {
-    // Query parameters
-    const params &#x3D; new URLSearchParams({
-            bytes: &#x27;1073741824&#x27;,
-            unit: &#x27;GB&#x27;,
-            precision: &#x27;2&#x27;,
-            standard: &#x27;binary&#x27;
-        });
-
-    const response = await fetch(`${API_URL}?${params}`, {
+    const response = await fetch(API_URL, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
