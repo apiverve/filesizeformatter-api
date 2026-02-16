@@ -44,7 +44,12 @@ from apiverve_filesizeformatter.apiClient import FilesizeformatterAPIClient
 # Initialize the client with your APIVerve API key
 api = FilesizeformatterAPIClient("[YOUR_API_KEY]")
 
-query = { "bytes": 1073741824, "unit": "GB", "precision": 2, "standard": "binary" }
+query = {
+    "bytes": 1073741824,
+    "unit": "GB",
+    "precision": 2,
+    "standard": "binary"
+}
 
 try:
     # Make the API call
@@ -82,7 +87,12 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "bytes": 1073741824, "unit": "GB", "precision": 2, "standard": "binary" }
+query = {
+    "bytes": 1073741824,
+    "unit": "GB",
+    "precision": 2,
+    "standard": "binary"
+}
 ```
 
 ###### Simple Request
@@ -136,7 +146,12 @@ from apiverve_filesizeformatter.apiClient import FilesizeformatterAPIClient, Fil
 
 api = FilesizeformatterAPIClient("[YOUR_API_KEY]")
 
-query = { "bytes": 1073741824, "unit": "GB", "precision": 2, "standard": "binary" }
+query = {
+    "bytes": 1073741824,
+    "unit": "GB",
+    "precision": 2,
+    "standard": "binary"
+}
 
 try:
     result = api.execute(query)
@@ -157,7 +172,12 @@ from apiverve_filesizeformatter.apiClient import FilesizeformatterAPIClient, Fil
 
 api = FilesizeformatterAPIClient("[YOUR_API_KEY]")
 
-query = { "bytes": 1073741824, "unit": "GB", "precision": 2, "standard": "binary" }
+query = {
+    "bytes": 1073741824,
+    "unit": "GB",
+    "precision": 2,
+    "standard": "binary"
+}
 
 try:
     result = api.execute(query)
@@ -191,7 +211,12 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_filesizeformatter.apiClient import FilesizeformatterAPIClient, FilesizeformatterAPIClientError
 
-query = { "bytes": 1073741824, "unit": "GB", "precision": 2, "standard": "binary" }
+query = {
+    "bytes": 1073741824,
+    "unit": "GB",
+    "precision": 2,
+    "standard": "binary"
+}
 
 # Using context manager ensures proper cleanup
 with FilesizeformatterAPIClient("[YOUR_API_KEY]") as api:
@@ -217,7 +242,12 @@ from apiverve_filesizeformatter.apiClient import FilesizeformatterAPIClient
 # Enable debug mode
 api = FilesizeformatterAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "bytes": 1073741824, "unit": "GB", "precision": 2, "standard": "binary" }
+query = {
+    "bytes": 1073741824,
+    "unit": "GB",
+    "precision": 2,
+    "standard": "binary"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -232,8 +262,14 @@ from apiverve_filesizeformatter.apiClient import FilesizeformatterAPIClient
 
 api = FilesizeformatterAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "bytes": 1073741824,
+    "unit": "GB",
+    "precision": 2,
+    "standard": "binary"
+}
+
 try:
-    query = { "bytes": 1073741824, "unit": "GB", "precision": 2, "standard": "binary" }
     result = api.execute(query)
     print(result)
 finally:
