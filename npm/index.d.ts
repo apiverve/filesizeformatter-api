@@ -4,22 +4,34 @@ declare module '@apiverve/filesizeformatter' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface filesizeformatterResponse {
     status: string;
     error: string | null;
     data: FileSizeFormatterData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface FileSizeFormatterData {
-      bytes:       number;
-      formatted:   string;
-      value:       number;
-      unit:        string;
-      standard:    string;
-      precision:   number;
-      conversions: { [key: string]: number };
+      bytes:       number | null;
+      formatted:   null | string;
+      value:       number | null;
+      unit:        null | string;
+      standard:    null | string;
+      precision:   number | null;
+      conversions: { [key: string]: number | null };
   }
 
   export default class filesizeformatterWrapper {
