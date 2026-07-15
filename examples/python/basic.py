@@ -17,11 +17,14 @@ def call_filesizeformatter_api():
     Make a GET request to the File Size Formatter API
     """
     try:
+        # Query parameters
+        params &#x3D; {&#x27;bytes&#x27;: 1073741824, &#x27;unit&#x27;: &#x27;GB&#x27;, &#x27;precision&#x27;: 2, &#x27;standard&#x27;: &#x27;binary&#x27;}
+
         headers = {
             'x-api-key': API_KEY
         }
 
-        response = requests.get(API_URL, headers=headers)
+        response = requests.get(API_URL, headers=headers, params=params)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
