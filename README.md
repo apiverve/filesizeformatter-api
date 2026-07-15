@@ -30,7 +30,14 @@ The File Size Formatter API provides a simple, reliable way to integrate file si
 ```javascript
 async function callFileSizeFormatterAPI() {
     try {
-        const response = await fetch('https://api.apiverve.com/v1/filesizeformatter', {
+        const params = new URLSearchParams({
+            bytes: 1073741824,
+            unit: 'GB',
+            precision: 2,
+            standard: 'binary'
+        });
+
+        const response = await fetch(`https://api.apiverve.com/v1/filesizeformatter?${params}`, {
             method: 'GET',
             headers: {
                 'x-api-key': 'YOUR_API_KEY_HERE'
@@ -50,7 +57,7 @@ callFileSizeFormatterAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/filesizeformatter?param=value" \
+curl -X GET "https://api.apiverve.com/v1/filesizeformatter?bytes=1073741824&unit=GB&precision=2&standard=binary" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -150,7 +157,7 @@ go get github.com/apiverve/filesizeformatter-api/go
 |---------|---------|
 | **Multi-language SDKs** | Native packages for JavaScript, Python, C#, Go, and Android |
 | **Simple Integration** | Single API key authentication, consistent response format |
-| **Production Ready** | 99.9% uptime, fast response times, used by thousands of developers |
+| **Production Ready** | 99.9% uptime SLA, served from 24 global regions |
 | **Comprehensive Docs** | Full examples, OpenAPI spec, and dedicated support |
 
 ---
@@ -169,7 +176,7 @@ go get github.com/apiverve/filesizeformatter-api/go
 The File Size Formatter API is commonly used for:
 
 - **Web Applications** - Add file size formatter features to your frontend or backend
-- **Mobile Apps** - Native SDKs for iOS and Android development
+- **Mobile Apps** - Native SDKs for Android development
 - **Automation** - Integrate with n8n, Zapier, or custom workflows
 - **SaaS Products** - Enhance your product with file size formatter capabilities
 - **Data Pipelines** - Process and analyze data at scale
