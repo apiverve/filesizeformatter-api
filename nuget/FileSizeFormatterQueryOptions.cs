@@ -14,7 +14,7 @@ namespace APIVerve.API.FileSizeFormatter
         /// Number of bytes to format
         /// </summary>
         [JsonProperty("bytes")]
-        public string Bytes { get; set; }
+        public int Bytes { get; set; }
 
         /// <summary>
         /// Specific target unit (optional, auto-selects best unit if not specified)
@@ -26,7 +26,7 @@ namespace APIVerve.API.FileSizeFormatter
         /// Decimal places (0-10)
         /// </summary>
         [JsonProperty("precision")]
-        public string Precision { get; set; }
+        public int? Precision { get; set; }
 
         /// <summary>
         /// Standard to use: binary (1024) or decimal (1000)
