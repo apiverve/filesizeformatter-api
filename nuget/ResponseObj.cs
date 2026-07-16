@@ -25,18 +25,21 @@ namespace APIVerve.API.FileSizeFormatter
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("bytes")]
-        public long Bytes { get; set; }
+        public long? Bytes { get; set; }
 
         [JsonProperty("formatted")]
         public string Formatted { get; set; }
 
         [JsonProperty("value")]
-        public long Value { get; set; }
+        public long? Value { get; set; }
 
         [JsonProperty("unit")]
         public string Unit { get; set; }
@@ -45,9 +48,21 @@ namespace APIVerve.API.FileSizeFormatter
         public string Standard { get; set; }
 
         [JsonProperty("precision")]
-        public long Precision { get; set; }
+        public long? Precision { get; set; }
 
         [JsonProperty("conversions")]
-        public Dictionary<string, long> Conversions { get; set; }
+        public Dictionary<string, long?> Conversions { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
