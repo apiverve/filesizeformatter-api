@@ -2,9 +2,9 @@ openapi: 3.0.4
 info:
   title: File Size Formatter
   description: >-
-    File Size Formatter is a tool for converting bytes to human-readable file
-    sizes (KB, MB, GB, TB, etc.). It supports both binary (1024) and decimal
-    (1000) standards with customizable precision.
+    File Size Formatter converts raw byte counts into human-readable file size
+    strings. Send a byte count with optional precision and unit settings to
+    receive formatted labels, unit names, and scaled numeric values.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +19,7 @@ servers:
 paths:
   /v1/filesizeformatter:
     get:
-      summary: Format File Size
+      summary: File Size Formatter
       description: Convert bytes to human-readable file size
       operationId: filesizeformatter
       parameters:
