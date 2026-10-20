@@ -1,13 +1,12 @@
-FileSizeFormatter API
+File Size Formatter API
 ============
 
-File Size Formatter is a tool for converting bytes to human-readable file sizes (KB, MB, GB, TB, etc.). It supports both binary (1024) and decimal (1000) standards with customizable precision.
+File Size Formatter converts raw byte counts into human-readable file size strings. Send a byte count with optional precision and unit settings to receive formatted labels, unit names, and scaled numeric values.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a .NET Wrapper for the [FileSizeFormatter API](https://apiverve.com/marketplace/filesizeformatter?utm_source=nuget&utm_medium=readme)
+[![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.FileSizeFormatter.svg)](https://www.nuget.org/packages/APIVerve.API.FileSizeFormatter)
+
+This is a .NET wrapper for the [File Size Formatter API](https://apiverve.com/marketplace/filesizeformatter?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -40,8 +39,8 @@ From within Visual Studio:
 
 ## Configuration
 
-Before using the filesizeformatter API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=readme)
+Before using the File Size Formatter API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -61,11 +60,11 @@ class Program
         var apiClient = new FileSizeFormatterAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new FileSizeFormatterQueryOptions {
-    Bytes = 1073741824,
-    Unit = "GB",
-    Precision = 2,
-    Standard = "binary"
-};
+            Bytes = 1073741824,
+            Unit = "GB",
+            Precision = 2,
+            Standard = "binary"
+        };
 
         // Make the API call
         try
@@ -95,13 +94,13 @@ class Program
 
 ## Usage
 
-The FileSizeFormatter API documentation is found here: [https://docs.apiverve.com/ref/filesizeformatter](https://docs.apiverve.com/ref/filesizeformatter?utm_source=nuget&utm_medium=readme).
+The File Size Formatter API documentation is found here: [https://docs.apiverve.com/ref/filesizeformatter](https://docs.apiverve.com/ref/filesizeformatter?utm_source=nuget&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ###### Authentication
-FileSizeFormatter API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
+File Size Formatter API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
 
 ```csharp
 // Create an instance of the API client
@@ -128,11 +127,11 @@ public class Example
         var apiClient = new FileSizeFormatterAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new FileSizeFormatterQueryOptions {
-    Bytes = 1073741824,
-    Unit = "GB",
-    Precision = 2,
-    Standard = "binary"
-};
+            Bytes = 1073741824,
+            Unit = "GB",
+            Precision = 2,
+            Standard = "binary"
+        };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
 
@@ -163,11 +162,11 @@ public class Example
         var apiClient = new FileSizeFormatterAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new FileSizeFormatterQueryOptions {
-    Bytes = 1073741824,
-    Unit = "GB",
-    Precision = 2,
-    Standard = "binary"
-};
+            Bytes = 1073741824,
+            Unit = "GB",
+            Precision = 2,
+            Standard = "binary"
+        };
 
         var response = apiClient.Execute(queryOptions);
 
@@ -203,11 +202,11 @@ public class Example
         var apiClient = new FileSizeFormatterAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new FileSizeFormatterQueryOptions {
-    Bytes = 1073741824,
-    Unit = "GB",
-    Precision = 2,
-    Standard = "binary"
-};
+            Bytes = 1073741824,
+            Unit = "GB",
+            Precision = 2,
+            Standard = "binary"
+        };
 
         try
         {
@@ -262,11 +261,11 @@ public class Example
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
         var queryOptions = new FileSizeFormatterQueryOptions {
-    Bytes = 1073741824,
-    Unit = "GB",
-    Precision = 2,
-    Standard = "binary"
-};
+            Bytes = 1073741824,
+            Unit = "GB",
+            Precision = 2,
+            Standard = "binary"
+        };
 
         try
         {
@@ -419,7 +418,7 @@ using (var apiClient = new FileSizeFormatterAPIClient("[YOUR_API_KEY]"))
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -430,12 +429,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
