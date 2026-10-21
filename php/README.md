@@ -1,6 +1,6 @@
 # File Size Formatter API - PHP Package
 
-File Size Formatter is a tool for converting bytes to human-readable file sizes (KB, MB, GB, TB, etc.). It supports both binary (1024) and decimal (1000) standards with customizable precision.
+File Size Formatter converts raw byte counts into human-readable file size strings. Send a byte count with optional precision and unit settings to receive formatted labels, unit names, and scaled numeric values.
 
 ## Installation
 
@@ -102,11 +102,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/filesizeformatter?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/filesizeformatter?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/filesizeformatter?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/filesizeformatter?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/filesizeformatter?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/filesizeformatter?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
