@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/filesizeformatter",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "File Size Formatter converts raw byte counts into human-readable file size strings. Send a byte count with optional precision and unit settings to receive formatted labels, unit names, and scaled numeric values.",
   "main": "index.js",
   "types": "index.d.ts",
