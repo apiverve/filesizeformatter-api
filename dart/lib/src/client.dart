@@ -46,7 +46,7 @@ final _formatPatterns = {
 
 /// File Size Formatter API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/filesizeformatter?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/filesizeformatter?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [bytes] (required) - Number of bytes to format [min: 0]
