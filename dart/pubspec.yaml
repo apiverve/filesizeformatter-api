@@ -1,6 +1,6 @@
 name: apiverve_filesizeformatter
 description: "File Size Formatter converts raw byte counts into human-readable file size strings. Send a byte count with optional precision and unit settings to receive formatted labels, unit names, and scaled numeric values."
-version: 1.2.4
+version: 1.2.5
 homepage: https://apiverve.com/marketplace/filesizeformatter?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/filesizeformatter-api/tree/main/dart
 
